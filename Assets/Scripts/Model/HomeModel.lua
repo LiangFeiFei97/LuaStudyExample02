@@ -7,6 +7,7 @@
 local HomeModel = {}
 
 HomeModel.itemCount = 4
+HomeModel.defItemID = 3
 HomeModel.curItemID = 3
 
 return HomeModel
