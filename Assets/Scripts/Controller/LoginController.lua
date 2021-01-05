@@ -47,7 +47,7 @@ end
 
 function LoginController.loginSuccess()
     LoginController.hidePanel()
-    HomeView.show()
+    HomeView.show(true)
 end
 
 function LoginController.hidePanel()

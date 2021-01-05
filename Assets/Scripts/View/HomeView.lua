@@ -52,15 +52,21 @@ for i = 1, HomeModel.itemCount do
     end)
 end
 
-img_character.sprite = HomeView.backpack[HomeModel.curItemID].img.sprite
-HomeView.backpack[HomeModel.curItemID].mask:SetActive(true)
-
-function HomeView.show()
+function HomeView.show(isForceInit)
+    if isForceInit then
+        HomeView.init()
+    end
     home_panel:SetActive(true)
 end
 
 function HomeView.hide()
     home_panel:SetActive(false)
+end
+
+function HomeView.init()
+    backpack_panel:SetActive(false)
+    img_character.sprite = HomeView.backpack[HomeModel.defItemID].img.sprite
+    HomeView.backpack[HomeModel.curItemID].mask:SetActive(true)
 end
 
 return HomeView
