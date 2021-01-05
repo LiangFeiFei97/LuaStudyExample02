@@ -1,25 +1,23 @@
+using UnityEngine;
 using XLua;
 
-namespace DefaultNamespace
+public class LuaEnvManager
 {
-    public class LuaEnvManager
+    private static LuaEnvManager instance;
+    private static LuaEnv luaEnv = new LuaEnv();
+
+    static LuaEnvManager()
     {
-        private static LuaEnvManager instance;
-        private static LuaEnv luaEnv = new LuaEnv();
+        instance = new LuaEnvManager();
+    }
 
-        static LuaEnvManager()
-        {
-            instance = new LuaEnvManager();
-        }
-        
-        public static LuaEnvManager Instance
-        {
-            get => instance;
-        }
+    public static LuaEnvManager Instance
+    {
+        get => instance;
+    }
 
-        public LuaEnv GetEnv()
-        {
-            return luaEnv;
-        }
+    public LuaEnv GetEnv()
+    {
+        return luaEnv;
     }
 }

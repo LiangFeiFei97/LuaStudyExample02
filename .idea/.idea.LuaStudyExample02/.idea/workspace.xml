@@ -2,20 +2,295 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2707406f-5c14-4f0b-bded-5e2cc8608dae" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Backpack/Images/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Backpack/Images/1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Backpack/Images/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Backpack/Images/2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Backpack/Images/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Backpack/Images/3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Backpack/Images/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Backpack/Images/4.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/backpack_item.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CSharp/LuaInit.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/init.lua" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Global/Init.lua" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Global/Init.lua.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Global/Tips.lua" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Global/Tips.lua.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model/HomeModel.lua" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model/HomeModel.lua.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model/UserDataModel.lua" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model/UserDataModel.lua.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model/init.lua" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model/init.lua.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/HomeView.lua" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/HomeView.lua.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/LoginView.lua" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/LoginView.lua.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/SignupView.lua" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/SignupView.lua.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/init.lua" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/View/init.lua.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Characters.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Characters/01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Characters/01.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/XLua/Gen.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/XLua/Gen/DelegatesGensBridge.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/XLua/Gen/EnumWrap.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/XLua/Gen/LuaInitWrap.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/XLua/Gen/PackUnpack.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/XLua/Gen/PackUnpack.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/XLua/Gen/Tutorial_BaseClassWrap.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/XLua/Gen/Tutorial_BaseClassWrap.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/XLua/Gen/Tutorial_CSCallLua_ItfDBridge.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/XLua/Gen/Tutorial_CSCallLua_ItfDBridge.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/XLua/Gen/Tutorial_DerivedClassExtensionsWrap.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/XLua/Gen/Tutorial_DerivedClassExtensionsWrap.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/XLua/Gen/Tutorial_DerivedClassWrap.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/XLua/Gen/Tutorial_DerivedClassWrap.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/XLua/Gen/Tutorial_ICalcWrap.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/XLua/Gen/Tutorial_ICalcWrap.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/XLua/Gen/WrapPusher.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/XLua/Gen/WrapPusher.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/XLua/Gen/XLuaGenAutoRegister.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/XLua/Gen/XLuaGenAutoRegister.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/XLua/Gen/link.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/Artifacts/c0/c08594230d46cdc9ec9098dfd096b8da" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/Artifacts/ea/ea3fdc0b15de4d7f8958ca2953ffe777" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/EditorInstance.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/ProtocolInstance.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/2/2ef864e99b0682c568e322fc6b4a6403.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/ShaderCache/e/e0b2cd2cf84ccfa8167f087d2ee3c435.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LuaStudyExample02/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LuaStudyExample02/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LuaStudyExample02/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LuaStudyExample02/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LuaStudyExample02/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LuaStudyExample02/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LuaStudyExample02/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LuaStudyExample02/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scene/Start.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scene/Start.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CSharp/LuaEnvManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CSharp/LuaEnvManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/LoginController.lua" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/LoginController.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/SignupController.lua" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/SignupController.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/SuccessController.lua" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/SuccessController.lua.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/UserDataController.lua" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/UserDataController.lua.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/01_Helloworld.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/01_Helloworld/Helloworld.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/01_Helloworld/Helloworld.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/01_Helloworld/Helloworld.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/01_Helloworld/Helloworld.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/02_U3DScripting.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/02_U3DScripting/LuaBehaviour.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/02_U3DScripting/LuaBehaviour.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/02_U3DScripting/LuaTestScript.lua.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/02_U3DScripting/LuaTestScript.lua.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/02_U3DScripting/U3DScripting.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/02_U3DScripting/U3DScripting.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/03_UIEvent.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/03_UIEvent/ButtonInteraction.lua.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/03_UIEvent/ButtonInteraction.lua.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/03_UIEvent/UI.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/03_UIEvent/UI.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/04_LuaObjectOrented.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/04_LuaObjectOrented/InvokeLua.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/04_LuaObjectOrented/InvokeLua.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XLua/Gen/LuaInitWrap.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/04_LuaObjectOrented/InvokeLua.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/04_LuaObjectOrented/InvokeLua.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/05_NoGc.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/05_NoGc/NoGc.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/05_NoGc/NoGc.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/05_NoGc/NoGc.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/05_NoGc/NoGc.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/06_Coroutine.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/06_Coroutine/Coroutine.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/06_Coroutine/Coroutine.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/06_Coroutine/CoroutineTest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/06_Coroutine/CoroutineTest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/06_Coroutine/Coroutine_Runner.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/06_Coroutine/Coroutine_Runner.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/06_Coroutine/Resources.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/06_Coroutine/Resources/coruntine_test.lua.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/06_Coroutine/Resources/coruntine_test.lua.txt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XLua/Gen/link.xml.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/06_Coroutine/Resources/cs_coroutine.lua.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/06_Coroutine/Resources/cs_coroutine.lua.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/07_AsyncTest.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/07_AsyncTest/AsyncTest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/07_AsyncTest/AsyncTest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/07_AsyncTest/AsyncTest.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/07_AsyncTest/AsyncTest.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/07_AsyncTest/MessageBox.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/07_AsyncTest/MessageBox.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/07_AsyncTest/Resources.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/07_AsyncTest/Resources/AlertBox.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/backpack_item.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/07_AsyncTest/Resources/AlertBox.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/07_AsyncTest/Resources/ConfirmBox.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/07_AsyncTest/Resources/ConfirmBox.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/07_AsyncTest/Resources/async_test.lua.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/07_AsyncTest/Resources/async_test.lua.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/07_AsyncTest/Resources/message_box.lua.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/07_AsyncTest/Resources/message_box.lua.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/08_Hotfix.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/08_Hotfix/HotfixTest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/08_Hotfix/HotfixTest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/08_Hotfix/HotfixTest.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/08_Hotfix/HotfixTest.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/08_Hotfix/HotfixTest2.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/08_Hotfix/HotfixTest2.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XLua/Gen/DelegatesGensBridge.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/08_Hotfix/HotfixTest2.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/08_Hotfix/HotfixTest2.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/08_Hotfix/StatefullTest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/08_Hotfix/StatefullTest.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XLua/Gen/EnumWrap.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/09_GenericMethod.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/09_GenericMethod/Foo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/09_GenericMethod/Foo.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/09_GenericMethod/GenericMethod.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/09_GenericMethod/GenericMethod.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/09_GenericMethod/GenericMethodExample.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/09_GenericMethod/GenericMethodExample.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/10_SignatureLoader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/10_SignatureLoader/Resources.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/10_SignatureLoader/Resources/signatured1.lua.bytes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/10_SignatureLoader/Resources/signatured1.lua.bytes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/10_SignatureLoader/Resources/signatured2.lua.bytes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/10_SignatureLoader/Resources/signatured2.lua.bytes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/10_SignatureLoader/Resources/signatured3.lua.bytes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/10_SignatureLoader/Resources/signatured3.lua.bytes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/10_SignatureLoader/SignatureLoaderTest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/10_SignatureLoader/SignatureLoaderTest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/10_SignatureLoader/SignatureLoaderTest.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/10_SignatureLoader/SignatureLoaderTest.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/10_SignatureLoader/otherfiles.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/10_SignatureLoader/otherfiles/key_ras" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/10_SignatureLoader/otherfiles/key_ras.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/10_SignatureLoader/otherfiles/key_ras.pub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/10_SignatureLoader/otherfiles/key_ras.pub.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/init.lua.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/10_SignatureLoader/otherfiles/signatured1.lua" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/10_SignatureLoader/otherfiles/signatured1.lua.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/10_SignatureLoader/otherfiles/signatured2.lua" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/10_SignatureLoader/otherfiles/signatured2.lua.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/10_SignatureLoader/otherfiles/signatured3.lua" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/10_SignatureLoader/otherfiles/signatured3.lua.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/10_SignatureLoader/signatured1.lua" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/10_SignatureLoader/signatured1.lua.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/10_SignatureLoader/signatured2.lua" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/10_SignatureLoader/signatured2.lua.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/10_SignatureLoader/signatured3.lua" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/10_SignatureLoader/signatured3.lua.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/11_RawObject.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/11_RawObject/RawObject.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/11_RawObject/RawObject.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/11_RawObject/RawObjectTest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/11_RawObject/RawObjectTest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/12_ReImplementInLua.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/12_ReImplementInLua/ReImplementInLua.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/12_ReImplementInLua/ReImplementInLua.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/12_ReImplementInLua/ReImplementInLua.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/12_ReImplementInLua/ReImplementInLua.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/13_BuildFromCLI.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/13_BuildFromCLI/Editor.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Backpack.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/13_BuildFromCLI/Editor/BuildFromCLI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/13_BuildFromCLI/Editor/BuildFromCLI.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CSharp/LuaInit.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/13_BuildFromCLI/build.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/13_BuildFromCLI/build.bat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Backpack/Images.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/ExampleGenConfig.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Examples/ExampleGenConfig.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ArtifactDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ArtifactDB" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/05/05407f0e93de00327ba19fd0c9bbdcff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/27/2747c0b2bbcc38a81e9014fe5e80b6ba" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/2d/2da6a7b4b097cb03f07ac3046a680fd0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/3a/3a1cd942b9ed9afb5a91c84c99eec733" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/3d/3d5002d6e19365ef429bfab378423e6f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/3d/3db33dc255e215ef96c2004e52b06149" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/50/508c9d8a8ec54a55cf4ab768d6b85330" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/80/8009b4fbc8ed45382f6899c8de9459cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/85/855b339fa0a725de259bfcbd363f3802" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/89/891b50da12fb152a0bca38d1080470a2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/9b/9b84505008d068ebfd9fc9fa345f2366" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/ad/ad605b7440e83fbc272b347964662199" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/b8/b8296263f2a2a72951bfe967c61e3fe4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/bd/bd9c571960a2392ffe312cacfc214ef8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/cd/cd6f2f23e410f32d2381082abec67b52" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/f9/f99e578a028debbd2125b0edd7513317" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/ff/ff5d4995e979cbb615e90f830e8713a3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/CurrentLayout-default.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/CurrentLayout-default.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp-Editor.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp-Editor.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SourceAssetDB" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/dd914d-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/dd914d-mainStage.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/970625-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/970625-mainStage.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/expandedItems" beforeDir="false" afterPath="$PROJECT_DIR$/Library/expandedItems" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe1.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe1.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe3.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe3.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe4.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe4.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe5.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe5.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="NewLua" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/obj/Debug/.NETFramework,Version=v4.7.1.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CSharp/LuaEnvManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CSharp/LuaInit.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A4546799-A4AB-4267-88E4-204C69507924/b4/d45fee66/Resources.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/Assets/Scripts/Controller/SuccessController.lua" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/View/SuccessView.lua" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Controller/HomeView.lua" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/CSharp/LuaStruct.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/CSharp/LuaEnvManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/View/LoginView.lua" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Model/UserDataModel.lua" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/View/SignupView.lua" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Model/init.lua" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Global/Init.lua" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/View/init.lua" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Controller/init.lua" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Controller/SignupController.lua" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Global/Tips.lua" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/CSharp/LuaInit.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Controller/LoginController.lua" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/View/HomeView.lua" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Model/HomeModel.lua" />
+    </changedPaths>
   </component>
   <component name="ProjectId" id="1mdGbW72foC6rcphSzPpzTo4nDr" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -25,6 +300,12 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -55,7 +336,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1609816125609</updated>
-      <workItem from="1609816129283" duration="912000" />
+      <workItem from="1609816129283" duration="13976000" />
+      <workItem from="1609837855006" duration="7000000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1609816635799</created>
@@ -64,7 +346,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609816635799</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="init">
+      <created>1609817146148</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1609817146148</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -82,6 +371,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

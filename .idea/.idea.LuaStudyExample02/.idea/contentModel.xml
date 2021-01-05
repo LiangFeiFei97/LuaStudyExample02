@@ -10,6 +10,7 @@
         <e p="Scripts" t="Include">
           <e p="CSharp" t="Include">
             <e p="LuaEnvManager.cs" t="Include" />
+            <e p="LuaInit.cs" t="Include" />
           </e>
         </e>
         <e p="XLua" t="Include">
@@ -17,63 +18,19 @@
           <e p="Editor" t="Include">
             <e p="ExampleConfig.cs" t="Include" />
           </e>
-          <e p="Examples" t="Include">
-            <e p="01_Helloworld" t="Include">
-              <e p="Helloworld.cs" t="Include" />
-            </e>
-            <e p="02_U3DScripting" t="Include">
-              <e p="LuaBehaviour.cs" t="Include" />
-              <e p="LuaTestScript.lua.txt" t="Include" />
-            </e>
-            <e p="03_UIEvent" t="Include">
-              <e p="ButtonInteraction.lua.txt" t="Include" />
-            </e>
-            <e p="04_LuaObjectOrented" t="Include">
-              <e p="InvokeLua.cs" t="Include" />
-            </e>
-            <e p="05_NoGc" t="Include">
-              <e p="NoGc.cs" t="Include" />
-            </e>
-            <e p="06_Coroutine" t="Include">
-              <e p="Coroutine_Runner.cs" t="Include" />
-              <e p="CoroutineTest.cs" t="Include" />
-              <e p="Resources" t="Include">
-                <e p="coruntine_test.lua.txt" t="Include" />
-                <e p="cs_coroutine.lua.txt" t="Include" />
-              </e>
-            </e>
-            <e p="07_AsyncTest" t="Include">
-              <e p="AsyncTest.cs" t="Include" />
-              <e p="MessageBox.cs" t="Include" />
-              <e p="Resources" t="Include">
-                <e p="async_test.lua.txt" t="Include" />
-                <e p="message_box.lua.txt" t="Include" />
-              </e>
-            </e>
-            <e p="08_Hotfix" t="Include">
-              <e p="HotfixTest.cs" t="Include" />
-              <e p="HotfixTest2.cs" t="Include" />
-              <e p="StatefullTest.cs" t="Include" />
-            </e>
-            <e p="09_GenericMethod" t="Include">
-              <e p="Foo.cs" t="Include" />
-              <e p="GenericMethodExample.cs" t="Include" />
-            </e>
-            <e p="10_SignatureLoader" t="Include">
-              <e p="SignatureLoaderTest.cs" t="Include" />
-            </e>
-            <e p="11_RawObject" t="Include">
-              <e p="RawObjectTest.cs" t="Include" />
-            </e>
-            <e p="12_ReImplementInLua" t="Include">
-              <e p="ReImplementInLua.cs" t="Include" />
-            </e>
-            <e p="13_BuildFromCLI" t="Include">
-              <e p="Editor" t="Include">
-                <e p="BuildFromCLI.cs" t="Include" />
-              </e>
-            </e>
-            <e p="ExampleGenConfig.cs" t="Include" />
+          <e p="Gen" t="Include">
+            <e p="DelegatesGensBridge.cs" t="Include" />
+            <e p="EnumWrap.cs" t="Include" />
+            <e p="link.xml" t="Include" />
+            <e p="LuaInitWrap.cs" t="Include" />
+            <e p="PackUnpack.cs" t="Include" />
+            <e p="Tutorial_BaseClassWrap.cs" t="Include" />
+            <e p="Tutorial_CSCallLua_ItfDBridge.cs" t="Include" />
+            <e p="Tutorial_DerivedClassExtensionsWrap.cs" t="Include" />
+            <e p="Tutorial_DerivedClassWrap.cs" t="Include" />
+            <e p="Tutorial_ICalcWrap.cs" t="Include" />
+            <e p="WrapPusher.cs" t="Include" />
+            <e p="XLuaGenAutoRegister.cs" t="Include" />
           </e>
           <e p="Resources" t="Include">
             <e p="perf" t="Include">
