@@ -59,23 +59,18 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\CSharp\LuaEnvManager.cs" />
-     <Compile Include="Assets\XLua\Examples\01_Helloworld\Helloworld.cs" />
-     <Compile Include="Assets\XLua\Examples\02_U3DScripting\LuaBehaviour.cs" />
-     <Compile Include="Assets\XLua\Examples\04_LuaObjectOrented\InvokeLua.cs" />
-     <Compile Include="Assets\XLua\Examples\05_NoGc\NoGc.cs" />
-     <Compile Include="Assets\XLua\Examples\06_Coroutine\CoroutineTest.cs" />
-     <Compile Include="Assets\XLua\Examples\06_Coroutine\Coroutine_Runner.cs" />
-     <Compile Include="Assets\XLua\Examples\07_AsyncTest\AsyncTest.cs" />
-     <Compile Include="Assets\XLua\Examples\07_AsyncTest\MessageBox.cs" />
-     <Compile Include="Assets\XLua\Examples\08_Hotfix\HotfixTest.cs" />
-     <Compile Include="Assets\XLua\Examples\08_Hotfix\HotfixTest2.cs" />
-     <Compile Include="Assets\XLua\Examples\08_Hotfix\StatefullTest.cs" />
-     <Compile Include="Assets\XLua\Examples\09_GenericMethod\Foo.cs" />
-     <Compile Include="Assets\XLua\Examples\09_GenericMethod\GenericMethodExample.cs" />
-     <Compile Include="Assets\XLua\Examples\10_SignatureLoader\SignatureLoaderTest.cs" />
-     <Compile Include="Assets\XLua\Examples\11_RawObject\RawObjectTest.cs" />
-     <Compile Include="Assets\XLua\Examples\12_ReImplementInLua\ReImplementInLua.cs" />
-     <Compile Include="Assets\XLua\Examples\ExampleGenConfig.cs" />
+     <Compile Include="Assets\Scripts\CSharp\LuaInit.cs" />
+     <Compile Include="Assets\XLua\Gen\DelegatesGensBridge.cs" />
+     <Compile Include="Assets\XLua\Gen\EnumWrap.cs" />
+     <Compile Include="Assets\XLua\Gen\LuaInitWrap.cs" />
+     <Compile Include="Assets\XLua\Gen\PackUnpack.cs" />
+     <Compile Include="Assets\XLua\Gen\Tutorial_BaseClassWrap.cs" />
+     <Compile Include="Assets\XLua\Gen\Tutorial_CSCallLua_ItfDBridge.cs" />
+     <Compile Include="Assets\XLua\Gen\Tutorial_DerivedClassExtensionsWrap.cs" />
+     <Compile Include="Assets\XLua\Gen\Tutorial_DerivedClassWrap.cs" />
+     <Compile Include="Assets\XLua\Gen\Tutorial_ICalcWrap.cs" />
+     <Compile Include="Assets\XLua\Gen\WrapPusher.cs" />
+     <Compile Include="Assets\XLua\Gen\XLuaGenAutoRegister.cs" />
      <Compile Include="Assets\XLua\Src\CodeEmit.cs" />
      <Compile Include="Assets\XLua\Src\CopyByValue.cs" />
      <Compile Include="Assets\XLua\Src\DelegateBridge.cs" />
@@ -104,18 +99,13 @@
      <Compile Include="Assets\XLua\Tutorial\LoadLuaScript\ByString\ByString.cs" />
      <Compile Include="Assets\XLua\Tutorial\LoadLuaScript\Loader\CustomLoader.cs" />
      <Compile Include="Assets\XLua\Tutorial\LuaCallCSharp\LuaCallCs.cs" />
-     <None Include="Assets\XLua\Examples\07_AsyncTest\Resources\async_test.lua.txt" />
      <None Include="Assets\XLua\Tutorial\LoadLuaScript\ByFile\Resources\byfile.lua.txt" />
-     <None Include="Assets\XLua\Examples\06_Coroutine\Resources\coruntine_test.lua.txt" />
      <None Include="Assets\XLua\Resources\xlua\util.lua.txt" />
      <None Include="Assets\XLua\Resources\perf\profiler.lua.txt" />
+     <None Include="Assets\XLua\Gen\link.xml" />
      <None Include="Assets\XLua\Resources\perf\memory.lua.txt" />
-     <None Include="Assets\XLua\Examples\03_UIEvent\ButtonInteraction.lua.txt" />
-     <None Include="Assets\XLua\Examples\02_U3DScripting\LuaTestScript.lua.txt" />
-     <None Include="Assets\XLua\Examples\07_AsyncTest\Resources\message_box.lua.txt" />
      <None Include="Assets\XLua\Resources\tdr\tdr.lua.txt" />
      <None Include="Assets\XLua\CHANGELOG.txt" />
-     <None Include="Assets\XLua\Examples\06_Coroutine\Resources\cs_coroutine.lua.txt" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/Dell/RiderProjects/LuaStudyExample02/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>

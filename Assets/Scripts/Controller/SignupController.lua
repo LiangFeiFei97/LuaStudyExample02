@@ -7,7 +7,7 @@
 local SignupController = {}
 
 function SignupController.signupClick(usr, pwd01, pwd02)
-    local tipText = nil
+    local tipText = ''
     local avail = true
     if usr == "" and avail then
         tipText = "用户名为空"
@@ -24,21 +24,24 @@ function SignupController.signupClick(usr, pwd01, pwd02)
         avail = false
     end
 
-    if UserDataController.getUser(usr) and avail then
+    if UserDataModel.getUser(usr) and avail then
         tipText = "用户已存在"
         avail = false
     end
 
     if avail then
-        SignupController.onSuccess(usr, pwd01)
+        tipText = '注册成功'
+        SignupController.onSuccess(tipText,usr, pwd01)
     else
-        NormalTipController.showTip(tipText)
+        Tips.show(tipText)
     end
 end
 
-function SignupController.onSuccess(usr, pwd)
-    UserDataController.addUser(usr, pwd)
-    SignupController.backClick()
+function SignupController.onSuccess(tipText,usr, pwd)
+    UserDataModel.addUser(usr, pwd)
+    Tips.show(tipText,function()
+        SignupController.backClick()
+    end)
 end
 
 function SignupController.backClick()
