@@ -6,3 +6,4 @@
 
 LoginController = require('Scripts.Controller.LoginController')
 SignupController = require('Scripts.Controller.SignupController')
+BackpackController = require('Scripts.Controller.BackpackController')

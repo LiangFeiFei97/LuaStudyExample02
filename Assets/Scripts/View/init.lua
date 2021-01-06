@@ -7,3 +7,4 @@
 LoginView = require('Scripts.View.LoginView')
 SignupView = require('Scripts.View.SignupView')
 HomeView = require('Scripts.View.HomeView')
+BackpackView = require('Scripts.View.BackpackView')

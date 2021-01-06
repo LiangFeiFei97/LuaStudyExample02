@@ -8,12 +8,10 @@ local HomeView = {}
 
 local img_character = home_panel.transform:Find('character/Image'):GetComponent('Image')
 local btn_character = home_panel.transform:Find('character/btn_backpack'):GetComponent('Button')
-local backpack_panel = home_panel.transform:Find('backpack_panel').gameObject
-local backpack_content = home_panel.transform:Find('backpack_panel/Viewport/Content')
 local btn_quit = home_panel.transform:Find('btn_quit'):GetComponent('Button')
 
 btn_character.onClick:AddListener(function()
-    backpack_panel:SetActive(not backpack_panel.activeSelf)
+    BackpackView.show()
 end)
 
 btn_quit.onClick:AddListener(function()
@@ -23,38 +21,9 @@ btn_quit.onClick:AddListener(function()
     end, true)
 end)
 
--- backpack init
-HomeView.backpack = {}
-
-for i = 1, HomeModel.itemCount do
-    local item = CS.UnityEngine.Resources.Load('Prefabs/backpack_item', typeof(CS.UnityEngine.GameObject))
-    local backpack_item = CS.UnityEngine.Object.Instantiate(item, backpack_content.gameObject.transform);
-    local backpack_item_content = {}
-    backpack_item_content.img = backpack_item.transform:Find('img'):GetComponent('Image')
-    backpack_item_content.mask = backpack_item.transform:Find('mask').gameObject
-    backpack_item_content.btn = backpack_item.transform:Find('btn'):GetComponent('Button')
-
-    table.insert(HomeView.backpack, i, backpack_item_content)
-
-    backpack_item_content.mask:SetActive(false)
-    backpack_item_content.img.sprite = CS.UnityEngine.Resources.Load('Backpack/Images/' .. i, typeof(CS.UnityEngine.Sprite))
-    backpack_item_content.btn.onClick:AddListener(function()
-        HomeView.backpack[HomeModel.curItemID].mask:SetActive(false)
-        for k, v in pairs(HomeView.backpack) do
-            if v == backpack_item_content then
-                HomeModel.curItemID = k
-                break
-            end
-        end
-
-        img_character.sprite = HomeView.backpack[HomeModel.curItemID].img.sprite
-        HomeView.backpack[HomeModel.curItemID].mask:SetActive(true)
-    end)
-end
-
 function HomeView.show(isForceInit)
     if isForceInit then
-        HomeView.init()
+        BackpackView.init()
     end
     home_panel:SetActive(true)
 end
@@ -63,10 +32,9 @@ function HomeView.hide()
     home_panel:SetActive(false)
 end
 
-function HomeView.init()
-    backpack_panel:SetActive(false)
-    img_character.sprite = HomeView.backpack[HomeModel.defItemID].img.sprite
-    HomeView.backpack[HomeModel.curItemID].mask:SetActive(true)
+-- 目前只有这一个属性，所以放在了homeview下
+function HomeView.setCharacterImage(sprite)
+    img_character.sprite = sprite
 end
 
 return HomeView
