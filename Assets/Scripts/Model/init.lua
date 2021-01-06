@@ -5,4 +5,4 @@
 ---
 
 UserDataModel = require( 'Scripts.Model.UserDataModel')
-HomeModel = require('Scripts.Model.HomeModel')
+BackpackModel = require('Scripts.Model.BackpackModel')

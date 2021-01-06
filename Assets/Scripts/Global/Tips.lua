@@ -24,8 +24,8 @@ btn_cancel.onClick:AddListener(function()
     Tips.close()
 end)
 
-function Tips.show(content,callback,showOKOnly)
-    btn_cancel.gameObject:SetActive(showOKOnly)
+function Tips.show(content,callback,showCancelBtn)
+    btn_cancel.gameObject:SetActive(showCancelBtn)
     txt_tip.text = content
     Tips.callback = callback
     tips_panel:SetActive(true)
@@ -33,6 +33,7 @@ end
 
 function Tips.close()
     tips_panel:SetActive(false)
+    txt_tip.text = ''
 end
 
 return Tips
