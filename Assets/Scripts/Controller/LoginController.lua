@@ -7,7 +7,7 @@
 local LoginController = {}
 
 function LoginController.loginClick(usr, pwd)
-    local tipText = nil
+    local tipText = ''
     local avail = true
     if usr == "" and avail then
         tipText = "用户名为空"

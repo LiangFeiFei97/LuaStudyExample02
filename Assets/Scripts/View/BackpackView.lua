@@ -27,6 +27,7 @@ function BackpackView.firstInit()
     for i = 1, BackpackModel.curItemCount do
         BackpackView.addItem(i)
     end
+    
     BackpackView.init()
 end
 
@@ -67,6 +68,7 @@ function BackpackView.subItem(index)
     CS.UnityEngine.Object.Destroy(BackpackView.items[index])
     BackpackView.items[index] = nil
     BackpackView.itemsContent[index] = nil
+    
     if BackpackModel.curItemID == index then
         HomeView.setCharacterImage(nil)
     end
