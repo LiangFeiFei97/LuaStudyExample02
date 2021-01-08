@@ -25,6 +25,7 @@ function HomeView.show(isForceInit)
     if isForceInit then
         BackpackView.init()
     end
+    
     home_panel:SetActive(true)
 end
 
