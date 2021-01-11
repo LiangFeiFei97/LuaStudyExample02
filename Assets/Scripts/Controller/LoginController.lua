@@ -6,6 +6,10 @@
 
 local LoginController = {}
 
+EventCenter.AddListener(EventCenter.Type.ShowLoginPage,function()
+    LoginController.showPanel()
+end)
+
 function LoginController.loginClick(usr, pwd)
     local tipText = ''
     local avail = true
@@ -38,7 +42,7 @@ end
 
 function LoginController.signupClick()
     LoginController.hidePanel()
-    SignupController.showPanel()
+    EventCenter.SendEvent(EventCenter.Type.ShowSignupPage)
 end
 
 function LoginController.showPanel()
@@ -47,7 +51,7 @@ end
 
 function LoginController.loginSuccess()
     LoginController.hidePanel()
-    HomeView.show(false)
+    EventCenter.SendEvent(EventCenter.Type.ShowHomePage)
 end
 
 function LoginController.hidePanel()

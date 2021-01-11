@@ -6,36 +6,25 @@
 
 local HomeView = {}
 
-local img_character = home_panel.transform:Find('character/Image'):GetComponent('Image')
-local btn_character = home_panel.transform:Find('character/btn_backpack'):GetComponent('Button')
 local btn_quit = home_panel.transform:Find('btn_quit'):GetComponent('Button')
 
-btn_character.onClick:AddListener(function()
-    BackpackView.show()
+EventCenter.AddListener(EventCenter.Type.ShowHomePage, function()
+    HomeView.show()
 end)
 
 btn_quit.onClick:AddListener(function()
     Tips.show('确定退出?', function()
         HomeView.hide()
-        LoginController.showPanel()
+        EventCenter.SendEvent(EventCenter.Type.ShowLoginPage)
     end, true)
 end)
 
-function HomeView.show(isForceInit)
-    if isForceInit then
-        BackpackView.init()
-    end
-    
+function HomeView.show()
     home_panel:SetActive(true)
 end
 
 function HomeView.hide()
     home_panel:SetActive(false)
-end
-
--- 目前只有这一个属性，所以放在了homeview下
-function HomeView.setCharacterImage(sprite)
-    img_character.sprite = sprite
 end
 
 return HomeView
