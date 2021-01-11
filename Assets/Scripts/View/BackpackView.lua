@@ -10,9 +10,15 @@ local backpack_panel = home_panel.transform:Find('backpack_panel').gameObject
 local backpack_content = home_panel.transform:Find('backpack_panel/Viewport/Content')
 local backpack_btn_add = home_panel.transform:Find('backpack_panel/btn_add'):GetComponent('Button')
 local backpack_btn_sub = home_panel.transform:Find('backpack_panel/btn_sub'):GetComponent('Button')
+local backpack_btn_num_add = home_panel.transform:Find('backpack_panel/btn_num_add'):GetComponent('Button')
+local backpack_btn_num_sub = home_panel.transform:Find('backpack_panel/btn_num_sub'):GetComponent('Button')
 
 BackpackView.items = {} -- 存放背包内物品对象
 BackpackView.itemsContent = {} -- 存放背包内物品属性 image button mask
+
+EventCenter.AddListener(EventCenter.Type.ShowBackpackPage, function()
+    BackpackView.show()
+end)
 
 backpack_btn_add.onClick:AddListener(function()
     BackpackController.addClick()
@@ -22,13 +28,21 @@ backpack_btn_sub.onClick:AddListener(function()
     BackpackController.subClick()
 end)
 
+backpack_btn_num_add.onClick:AddListener(function()
+    BackpackController.numAddClick()
+end)
+
+backpack_btn_num_sub.onClick:AddListener(function()
+    BackpackController.numSubClick()
+end)
+
 -- 第一次启动时初始化
 function BackpackView.firstInit()
     for i = 1, BackpackModel.curItemCount do
         BackpackView.addItem(i)
     end
-    
-    BackpackView.init()
+
+    BackpackView.setDefState()
 end
 
 function BackpackView.addItem(index)
@@ -38,20 +52,22 @@ function BackpackView.addItem(index)
     backpack_item_content.img = backpack_item.transform:Find('img'):GetComponent('Image')
     backpack_item_content.mask = backpack_item.transform:Find('mask').gameObject
     backpack_item_content.btn = backpack_item.transform:Find('btn'):GetComponent('Button')
+    backpack_item_content.num = backpack_item.transform:Find('txt_num'):GetComponent(typeof(CS.UnityEngine.UI.Text))
 
     table.insert(BackpackView.itemsContent, index, backpack_item_content)
     table.insert(BackpackView.items, index, backpack_item)
 
     backpack_item_content.mask:SetActive(false)
-    backpack_item_content.img.sprite = CS.UnityEngine.Resources.Load('Backpack/Images/' .. index, typeof(CS.UnityEngine.Sprite))
-    
+    backpack_item_content.img.sprite = Load('Backpack/Images/' .. BackpackModel.items[index].name, typeof(CS.UnityEngine.Sprite))
+    backpack_item_content.num.text = BackpackModel.items[index].num
+
     -- 物品点击事件
     backpack_item_content.btn.onClick:AddListener(function()
         -- 判断当前穿戴物品是否被删除
-        if BackpackView.itemsContent[BackpackModel.curItemID] then 
-            BackpackView.itemsContent[BackpackModel.curItemID].mask:SetActive(false) 
+        if BackpackView.itemsContent[BackpackModel.curItemID] then
+            BackpackView.itemsContent[BackpackModel.curItemID].mask:SetActive(false)
         end
-        
+
         for k, v in pairs(BackpackView.itemsContent) do
             if v == backpack_item_content then
                 BackpackModel.curItemID = k
@@ -59,7 +75,7 @@ function BackpackView.addItem(index)
             end
         end
 
-        HomeView.setCharacterImage(BackpackView.itemsContent[BackpackModel.curItemID].img.sprite)
+        EventCenter.SendEvent(EventCenter.Type.SetCharacterImage, BackpackView.itemsContent[BackpackModel.curItemID].img.sprite)
         BackpackView.itemsContent[BackpackModel.curItemID].mask:SetActive(true)
     end)
 end
@@ -68,14 +84,19 @@ function BackpackView.subItem(index)
     CS.UnityEngine.Object.Destroy(BackpackView.items[index])
     BackpackView.items[index] = nil
     BackpackView.itemsContent[index] = nil
-    
+
     if BackpackModel.curItemID == index then
-        HomeView.setCharacterImage(nil)
+        EventCenter.SendEvent(EventCenter.Type.SetCharacterImage, nil)
     end
 end
 
-function BackpackView.init()
-    HomeView.setCharacterImage(BackpackView.itemsContent[BackpackModel.defItemID].img.sprite)
+function BackpackView.updateItem(index, num)
+    BackpackView.itemsContent[index].num.text = num
+end
+
+function BackpackView.setDefState()
+    print('sendevent')
+    EventCenter.SendEvent(EventCenter.Type.SetCharacterImage, BackpackView.itemsContent[BackpackModel.defItemID].img.sprite)
     BackpackView.itemsContent[BackpackModel.defItemID].mask:SetActive(true)
 end
 

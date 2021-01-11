@@ -4,6 +4,15 @@
 --- DateTime: 2020/12/22 16:18
 ---
 
+-- Global
+EventCenter = require('Scripts.Global.EventCenter')
+Tips = require('Scripts.Global.Tips')
+Users = { { username = 'admin', password = 'admin' }, { username = '1', password = '1' } }
+
+function _G.Load(path, type)
+    return CS.UnityEngine.Resources.Load(path, type) or nil
+end
+
 -- Controllers
 require('Scripts.Controller.init')
 
@@ -12,10 +21,6 @@ require('Scripts.Model.init')
 
 -- Views
 require('Scripts.View.init')
-
--- Global
-Tips = require('Scripts.Global.Tips')
-Users = { { username = 'admin', password = 'admin' } }
 
 print("all variate init finish")
 

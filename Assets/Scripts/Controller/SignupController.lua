@@ -6,6 +6,10 @@
 
 local SignupController = {}
 
+EventCenter.AddListener(EventCenter.Type.ShowSignupPage,function()
+    SignupController.showPanel()
+end)
+
 function SignupController.signupClick(usr, pwd01, pwd02)
     local tipText = ''
     local avail = true
@@ -31,22 +35,22 @@ function SignupController.signupClick(usr, pwd01, pwd02)
 
     if avail then
         tipText = '注册成功'
-        SignupController.onSuccess(tipText,usr, pwd01)
+        SignupController.onSuccess(tipText, usr, pwd01)
     else
         Tips.show(tipText)
     end
 end
 
-function SignupController.onSuccess(tipText,usr, pwd)
+function SignupController.onSuccess(tipText, usr, pwd)
     UserDataModel.addUser(usr, pwd)
-    Tips.show(tipText,function()
+    Tips.show(tipText, function()
         SignupController.backClick()
     end)
 end
 
 function SignupController.backClick()
     SignupController.hidePanel()
-    LoginController.showPanel()
+    EventCenter.SendEvent(EventCenter.Type.ShowLoginPage)
 end
 
 function SignupController.hidePanel()
