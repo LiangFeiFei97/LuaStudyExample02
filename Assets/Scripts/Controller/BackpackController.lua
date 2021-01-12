@@ -6,27 +6,29 @@
 
 local BackpackController = {}
 
-function BackpackController.addClick()
+function BackpackController.addClick(callback)
     if BackpackModel.curItemCount < BackpackModel.maxItemCount then
         BackpackModel.curItemCount = BackpackModel.curItemCount + 1
-        BackpackView.addItem(BackpackModel.curItemCount)
+        BackpackModel.curItems[BackpackModel.curItemCount] = BackpackModel.items[BackpackModel.curItemCount]
+        callback(BackpackModel.curItemCount)
         table.insert(BackpackModel.curItems, BackpackModel.curItemCount, BackpackModel.items[BackpackModel.curItemCount])
     else
         Tips.show('没有可以添加的物品')
     end
 end
 
-function BackpackController.subClick()
+function BackpackController.subClick(callback)
     if BackpackModel.curItemCount > 0 then
         if BackpackModel.curItemCount == BackpackModel.curItemID then
             Tips.show('确定删除当前穿戴物品?', function()
-                BackpackView.subItem(BackpackModel.curItemCount)
+                callback(BackpackModel.curItemCount)
                 BackpackModel.curItemID = nil
                 BackpackModel.curItems[BackpackModel.curItemCount] = nil
                 BackpackModel.curItemCount = BackpackModel.curItemCount - 1
             end, true)
         else
-            BackpackView.subItem(BackpackModel.curItemCount)
+            callback(BackpackModel.curItemCount)
+            BackpackModel.curItems[BackpackModel.curItemCount] = nil
             BackpackModel.curItemCount = BackpackModel.curItemCount - 1
         end
     else
@@ -34,27 +36,27 @@ function BackpackController.subClick()
     end
 end
 
-function BackpackController.numAddClick()
+function BackpackController.numAddClick(callback)
     if BackpackModel.curItemID then
         if BackpackModel.curItems[BackpackModel.curItemID].num >= 99 then
             Tips.show('数量不能大于99')
             return
         end
         BackpackModel.curItems[BackpackModel.curItemID].num = BackpackModel.curItems[BackpackModel.curItemID].num + 1
-        BackpackView.updateItem(BackpackModel.curItemID, BackpackModel.curItems[BackpackModel.curItemID].num)
+        callback(BackpackModel.curItemID, BackpackModel.curItems[BackpackModel.curItemID].num)
     else
         Tips.show('请选择物品')
     end
 end
 
-function BackpackController.numSubClick()
+function BackpackController.numSubClick(callback)
     if BackpackModel.curItemID then
         if BackpackModel.curItems[BackpackModel.curItemID].num <= 1 then
             Tips.show('数量不能小于1')
             return
         end
         BackpackModel.curItems[BackpackModel.curItemID].num = BackpackModel.curItems[BackpackModel.curItemID].num - 1
-        BackpackView.updateItem(BackpackModel.curItemID, BackpackModel.curItems[BackpackModel.curItemID].num)
+        callback(BackpackModel.curItemID, BackpackModel.curItems[BackpackModel.curItemID].num)
     else
         Tips.show('请选择物品')
     end

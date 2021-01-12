@@ -6,19 +6,28 @@
 
 local CharacterView = {}
 
-local img_character = home_panel.transform:Find('character/Image'):GetComponent('Image')
-local btn_character = home_panel.transform:Find('character/btn_backpack'):GetComponent('Button')
-
-EventCenter.AddListener(EventCenter.Type.SetCharacterImage, function(param)
-    CharacterView.setImage(param)
-end)
-
-btn_character.onClick:AddListener(function()
-    EventCenter.SendEvent(EventCenter.Type.ShowBackpackPage)
-end)
+local home_panel = nil
+local img_character = nil
+local btn_character = nil
 
 function CharacterView.setImage(sprite)
     img_character.sprite = sprite
+end
+
+function CharacterView.init(panel)
+    home_panel = panel
+    img_character = home_panel.transform:Find('character/Image'):GetComponent('Image')
+    btn_character = home_panel.transform:Find('character/btn_backpack'):GetComponent('Button')
+
+    EventCenter.AddListener(EventCenter.Type.SetCharacterImage, function(param)
+        CharacterView.setImage(param)
+    end)
+
+    btn_character.onClick:AddListener(function()
+        UIManager.showPanel('backpack_panel')
+    end)
+
+    CharacterView.setImage(Resource.loadImage(BackpackModel.items[BackpackModel.curItemID].name))
 end
 
 return CharacterView

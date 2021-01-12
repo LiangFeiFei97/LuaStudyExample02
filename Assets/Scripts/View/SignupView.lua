@@ -6,29 +6,41 @@
 
 local SignupView = {}
 
-local signup_username = signup_panel.transform:Find('input_username'):GetComponent("InputField")
-local signup_password01 = signup_panel.transform:Find('input_password01'):GetComponent("InputField")
-local signup_password02 = signup_panel.transform:Find('input_password02'):GetComponent("InputField")
-local signup_btn_signup = signup_panel.transform:Find('btn_signup'):GetComponent("Button")
-local signup_btn_back = signup_panel.transform:Find('btn_back'):GetComponent("Button")
-
-signup_btn_signup.onClick:AddListener(function()
-    SignupController.signupClick(signup_username.text,signup_password01.text,signup_password02.text)
-end)
-
-signup_btn_back.onClick:AddListener(function()
-    SignupController.backClick()
-end)
+local signup_panel = nil
+local signup_username = nil
+local signup_password01 = nil
+local signup_password02 = nil
+local signup_btn_signup = nil
+local signup_btn_back = nil
 
 function SignupView.hide()
-    signup_panel:SetActive(false)
-    signup_username.text = ""
-    signup_password01.text = ""
-    signup_password02.text = ""
+    UIManager.hidePanel('signup_panel')
 end 
 
-function SignupView.show()
+function SignupView.show(panel)
+    signup_panel = panel
+    SignupView.init()
     signup_panel:SetActive(true)
-end 
+end
+
+function SignupView.init()
+    signup_username = signup_panel.transform:Find('input_username'):GetComponent("InputField")
+    signup_password01 = signup_panel.transform:Find('input_password01'):GetComponent("InputField")
+    signup_password02 = signup_panel.transform:Find('input_password02'):GetComponent("InputField")
+    signup_btn_signup = signup_panel.transform:Find('btn_signup'):GetComponent("Button")
+    signup_btn_back = signup_panel.transform:Find('btn_back'):GetComponent("Button")
+
+    signup_btn_signup.onClick:AddListener(function()
+        SignupController.signupClick(signup_username.text,signup_password01.text,signup_password02.text,function()
+            SignupView.hide()
+            UIManager.showPanel('login_panel')
+        end)
+    end)
+
+    signup_btn_back.onClick:AddListener(function()
+        SignupView.hide()
+        UIManager.showPanel('login_panel')
+    end)
+end
 
 return SignupView

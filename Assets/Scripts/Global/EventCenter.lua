@@ -8,10 +8,14 @@ local EventCenter = {}
 
 EventCenter.Type = {
     SetCharacterImage = 'SetCharacterImage',
-    ShowSignupPage = 'ShowSignupPage',
-    ShowLoginPage = 'ShowLoginPage',
-    ShowHomePage = 'ShowHomePage' , 
-    ShowBackpackPage = 'ShowBackpackPage'
+    AddBackpackItem = 'AddBackpackItem',
+    SubBackpackItem = 'SubBackpackItem',
+    UpdateBackpackItem = 'UpdateBackpackItem',
+    RefreshBackpackItemUI = 'RefreshBackpackItemUI'
+    --ShowSignupPage = 'ShowSignupPage',
+    --ShowLoginPage = 'ShowLoginPage',
+    --ShowHomePage = 'ShowHomePage' , 
+    --ShowBackpackPage = 'ShowBackpackPage'
 }
 
 --添加事件 eventType-->事件类型  func-->方法

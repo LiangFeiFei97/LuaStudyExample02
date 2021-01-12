@@ -5,13 +5,17 @@
 ---
 
 -- Global
+
+function _G.Load(path, type)
+    return CS.UnityEngine.Resources.Load(path, type or typeof(CS.UnityEngine.GameObject)) or nil
+end
+
 EventCenter = require('Scripts.Global.EventCenter')
 Tips = require('Scripts.Global.Tips')
 Users = { { username = 'admin', password = 'admin' }, { username = '1', password = '1' } }
+UIDefine = require('Scripts.Global.UIDefine')
+Resource = require('Scripts.Global.Resource')
 
-function _G.Load(path, type)
-    return CS.UnityEngine.Resources.Load(path, type) or nil
-end
 
 -- Controllers
 require('Scripts.Controller.init')
@@ -22,6 +26,10 @@ require('Scripts.Model.init')
 -- Views
 require('Scripts.View.init')
 
+UIManager = require('Scripts.Global.UIManager')
+
+
 print("all variate init finish")
 
-LoginController.showPanel()
+Resource.load('MainUI')
+UIManager.showPanel('login_panel')

@@ -6,11 +6,7 @@
 
 local LoginController = {}
 
-EventCenter.AddListener(EventCenter.Type.ShowLoginPage,function()
-    LoginController.showPanel()
-end)
-
-function LoginController.loginClick(usr, pwd)
+function LoginController.loginClick(usr, pwd, callback)
     local tipText = ''
     local avail = true
     if usr == "" and avail then
@@ -34,28 +30,12 @@ function LoginController.loginClick(usr, pwd)
     end
 
     if avail then
-        LoginController.loginSuccess()
+        if callback then
+            callback()
+        end
     else
         Tips.show(tipText)
     end
-end
-
-function LoginController.signupClick()
-    LoginController.hidePanel()
-    EventCenter.SendEvent(EventCenter.Type.ShowSignupPage)
-end
-
-function LoginController.showPanel()
-    LoginView.show()
-end
-
-function LoginController.loginSuccess()
-    LoginController.hidePanel()
-    EventCenter.SendEvent(EventCenter.Type.ShowHomePage)
-end
-
-function LoginController.hidePanel()
-    LoginView.hide()
 end
 
 return LoginController
