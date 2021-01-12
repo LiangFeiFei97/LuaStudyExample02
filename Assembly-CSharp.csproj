@@ -60,6 +60,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\CSharp\LuaEnvManager.cs" />
      <Compile Include="Assets\Scripts\CSharp\LuaInit.cs" />
+     <Compile Include="Assets\Scripts\CSharp\Test.cs" />
      <Compile Include="Assets\XLua\Gen\DelegatesGensBridge.cs" />
      <Compile Include="Assets\XLua\Gen\EnumWrap.cs" />
      <Compile Include="Assets\XLua\Gen\LuaInitWrap.cs" />

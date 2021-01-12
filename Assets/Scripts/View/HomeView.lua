@@ -6,25 +6,28 @@
 
 local HomeView = {}
 
-local btn_quit = home_panel.transform:Find('btn_quit'):GetComponent('Button')
+local home_panel = nil
+local btn_quit = nil
 
-EventCenter.AddListener(EventCenter.Type.ShowHomePage, function()
-    HomeView.show()
-end)
-
-btn_quit.onClick:AddListener(function()
-    Tips.show('确定退出?', function()
-        HomeView.hide()
-        EventCenter.SendEvent(EventCenter.Type.ShowLoginPage)
-    end, true)
-end)
-
-function HomeView.show()
+function HomeView.show(panel)
+    home_panel = panel
+    HomeView.init()
     home_panel:SetActive(true)
 end
 
+function HomeView.init()
+    require('Scripts.View.CharacterView').init(home_panel)
+    btn_quit = home_panel.transform:Find('btn_quit'):GetComponent('Button')
+    btn_quit.onClick:AddListener(function()
+        Tips.show('确定退出?', function()
+            HomeView.hide()
+            UIManager.showPanel('login_panel')
+        end, true)
+    end)
+end
+
 function HomeView.hide()
-    home_panel:SetActive(false)
+    UIManager.hidePanel('home_panel')
 end
 
 return HomeView

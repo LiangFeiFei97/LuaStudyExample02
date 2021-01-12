@@ -6,48 +6,15 @@
 
 local BackpackView = {}
 
-local backpack_panel = home_panel.transform:Find('backpack_panel').gameObject
-local backpack_content = home_panel.transform:Find('backpack_panel/Viewport/Content')
-local backpack_btn_add = home_panel.transform:Find('backpack_panel/btn_add'):GetComponent('Button')
-local backpack_btn_sub = home_panel.transform:Find('backpack_panel/btn_sub'):GetComponent('Button')
-local backpack_btn_num_add = home_panel.transform:Find('backpack_panel/btn_num_add'):GetComponent('Button')
-local backpack_btn_num_sub = home_panel.transform:Find('backpack_panel/btn_num_sub'):GetComponent('Button')
-
-BackpackView.items = {} -- 存放背包内物品对象
-BackpackView.itemsContent = {} -- 存放背包内物品属性 image button mask
-
-EventCenter.AddListener(EventCenter.Type.ShowBackpackPage, function()
-    BackpackView.show()
-end)
-
-backpack_btn_add.onClick:AddListener(function()
-    BackpackController.addClick()
-end)
-
-backpack_btn_sub.onClick:AddListener(function()
-    BackpackController.subClick()
-end)
-
-backpack_btn_num_add.onClick:AddListener(function()
-    BackpackController.numAddClick()
-end)
-
-backpack_btn_num_sub.onClick:AddListener(function()
-    BackpackController.numSubClick()
-end)
-
--- 第一次启动时初始化
-function BackpackView.firstInit()
-    for i = 1, BackpackModel.curItemCount do
-        BackpackView.addItem(i)
-    end
-
-    BackpackView.setDefState()
-end
+local backpack_panel = nil
+local backpack_content = nil
+local backpack_btn_add = nil
+local backpack_btn_sub = nil
+local backpack_btn_num_add = nil
+local backpack_btn_num_sub = nil
 
 function BackpackView.addItem(index)
-    local item = CS.UnityEngine.Resources.Load('Prefabs/backpack_item', typeof(CS.UnityEngine.GameObject))
-    local backpack_item = CS.UnityEngine.Object.Instantiate(item, backpack_content.gameObject.transform);
+    local backpack_item = Resource.load('backpack_item')
     local backpack_item_content = {}
     backpack_item_content.img = backpack_item.transform:Find('img'):GetComponent('Image')
     backpack_item_content.mask = backpack_item.transform:Find('mask').gameObject
@@ -58,8 +25,8 @@ function BackpackView.addItem(index)
     table.insert(BackpackView.items, index, backpack_item)
 
     backpack_item_content.mask:SetActive(false)
-    backpack_item_content.img.sprite = Load('Backpack/Images/' .. BackpackModel.items[index].name, typeof(CS.UnityEngine.Sprite))
-    backpack_item_content.num.text = BackpackModel.items[index].num
+    backpack_item_content.img.sprite = Resource.loadImage(BackpackModel.items[index].name)
+    backpack_item_content.num.text = BackpackModel.curItems[index].num
 
     -- 物品点击事件
     backpack_item_content.btn.onClick:AddListener(function()
@@ -81,7 +48,7 @@ function BackpackView.addItem(index)
 end
 
 function BackpackView.subItem(index)
-    CS.UnityEngine.Object.Destroy(BackpackView.items[index])
+    Resource.destroy(BackpackView.items[index])
     BackpackView.items[index] = nil
     BackpackView.itemsContent[index] = nil
 
@@ -94,20 +61,67 @@ function BackpackView.updateItem(index, num)
     BackpackView.itemsContent[index].num.text = num
 end
 
-function BackpackView.setDefState()
-    print('sendevent')
-    EventCenter.SendEvent(EventCenter.Type.SetCharacterImage, BackpackView.itemsContent[BackpackModel.defItemID].img.sprite)
-    BackpackView.itemsContent[BackpackModel.defItemID].mask:SetActive(true)
+function BackpackView.setCurState()
+    if not BackpackView.itemsContent[BackpackModel.curItemID] then
+        return
+    end
+    EventCenter.SendEvent(EventCenter.Type.SetCharacterImage, BackpackView.itemsContent[BackpackModel.curItemID].img.sprite)
+    BackpackView.itemsContent[BackpackModel.curItemID].mask:SetActive(true)
 end
 
-function BackpackView.show()
-    backpack_panel:SetActive(not backpack_panel.activeSelf)
+function BackpackView.show(panel)
+    if backpack_panel then
+        BackpackView.hide()
+        return
+    end
+    backpack_panel = panel
+    BackpackView.init()
 end
 
 function BackpackView.hide()
-    backpack_panel:SetActive(false)
+    backpack_panel = nil
+    UIManager.hidePanel('backpack_panel')
 end
 
-BackpackView.firstInit()
+function BackpackView.init()
+    backpack_content = backpack_panel.transform:Find('Viewport/Content')
+    backpack_btn_add = backpack_panel.transform:Find('btn_add'):GetComponent('Button')
+    backpack_btn_sub = backpack_panel.transform:Find('btn_sub'):GetComponent('Button')
+    backpack_btn_num_add = backpack_panel.transform:Find('btn_num_add'):GetComponent('Button')
+    backpack_btn_num_sub = backpack_panel.transform:Find('btn_num_sub'):GetComponent('Button')
+
+    BackpackView.items = {} -- 存放背包内物品对象
+    BackpackView.itemsContent = {} -- 存放背包内物品属性 image button mask
+
+    backpack_btn_add.onClick:AddListener(function()
+        BackpackController.addClick(function(index)
+            BackpackView.addItem(index)
+        end)
+    end)
+
+    backpack_btn_sub.onClick:AddListener(function()
+        BackpackController.subClick(function(index)
+            BackpackView.subItem(index)
+        end)
+    end)
+
+    backpack_btn_num_add.onClick:AddListener(function()
+        BackpackController.numAddClick(function(index, num)
+            BackpackView.updateItem(index, num)
+        end)
+    end)
+
+    backpack_btn_num_sub.onClick:AddListener(function()
+        BackpackController.numSubClick(function(index, num)
+            BackpackView.updateItem(index, num)
+        end)
+    end)
+
+    for i = 1, BackpackModel.curItemCount do
+        BackpackView.addItem(i)
+    end
+
+    BackpackView.setCurState()
+end
 
 return BackpackView

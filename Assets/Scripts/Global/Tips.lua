@@ -6,34 +6,43 @@
 
 local Tips = {}
 
-local btn_confirm = tips_panel.transform:Find('bg/bottomBar/btn_confirm'):GetComponent('Button')
-local btn_cancel = tips_panel.transform:Find('bg/bottomBar/btn_cancel'):GetComponent('Button')
-local txt_tip = tips_panel.transform:Find('bg/txt_tip'):GetComponent(typeof(CS.UnityEngine.UI.Text))
-
-Tips.callback = nil
-
-btn_confirm.onClick:AddListener(function()
-    Tips.close()
-    if Tips.callback then 
-        Tips.callback()
-        Tips.callback = nil
-    end
-end)
-
-btn_cancel.onClick:AddListener(function()
-    Tips.close()
-end)
+local tips_panel = nil
+local btn_confirm = nil
+local btn_cancel = nil
+local txt_tip = nil
 
 function Tips.show(content,callback,showCancelBtn)
+    tips_panel = tips_panel or Resource.load('tips_panel')
+    Tips.init()
     btn_cancel.gameObject:SetActive(showCancelBtn)
     txt_tip.text = content
     Tips.callback = callback
     tips_panel:SetActive(true)
 end 
 
+function Tips.init()
+    btn_confirm = tips_panel.transform:Find('bg/bottomBar/btn_confirm'):GetComponent('Button')
+    btn_cancel = tips_panel.transform:Find('bg/bottomBar/btn_cancel'):GetComponent('Button')
+    txt_tip = tips_panel.transform:Find('bg/txt_tip'):GetComponent(typeof(CS.UnityEngine.UI.Text))
+
+    Tips.callback = nil
+
+    btn_confirm.onClick:AddListener(function()
+        Tips.close()
+        if Tips.callback then
+            Tips.callback()
+            Tips.callback = nil
+        end
+    end)
+
+    btn_cancel.onClick:AddListener(function()
+        Tips.close()
+    end)
+end
+
 function Tips.close()
-    tips_panel:SetActive(false)
-    txt_tip.text = ''
+    Resource.destroy(tips_panel)
+    tips_panel = nil
 end
 
 return Tips
