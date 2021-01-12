@@ -27,7 +27,11 @@ function CharacterView.init(panel)
         UIManager.showPanel('backpack_panel')
     end)
 
-    CharacterView.setImage(Resource.loadImage(BackpackModel.items[BackpackModel.curItemID].name))
+    if BackpackModel.items[BackpackModel.curItemID] then
+        CharacterView.setImage(Resource.loadImage(BackpackModel.items[BackpackModel.curItemID].name))
+    else
+        CharacterView.setImage(nil)
+    end
 end
 
 return CharacterView

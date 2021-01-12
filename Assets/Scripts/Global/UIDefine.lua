@@ -6,13 +6,6 @@
 
 local UIDefine = {}
 
-LoginView = require('Scripts.View.LoginView')
-SignupView = require('Scripts.View.SignupView')
-HomeView = require('Scripts.View.HomeView')
-CharacterView = require('Scripts.View.CharacterView')
-BackpackView = require('Scripts.View.BackpackView')
-
-
 UIDefine.UI = {
     MainUI = {
       path = 'Prefabs/MainUI',
