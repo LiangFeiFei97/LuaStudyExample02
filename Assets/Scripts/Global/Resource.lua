@@ -7,7 +7,7 @@
 local Resource = {}
 
 function Resource.load(name)
-    local object = Load(UIDefine.UI[name].path)
+    local object = CS.UnityEngine.Resources.Load(UIDefine.UI[name].path, typeof(CS.UnityEngine.GameObject))
     local parent = CS.UnityEngine.GameObject.Find('Canvas').transform
     if UIDefine.UI[name].parent then
         parent = parent:Find(UIDefine.UI[name].parent)
@@ -18,7 +18,7 @@ function Resource.load(name)
 end
 
 function Resource.loadImage(name)
-    return Load('Backpack/Images/' .. name, typeof(CS.UnityEngine.Sprite))
+    return CS.UnityEngine.Resources.Load('Backpack/Images/' .. name, typeof(CS.UnityEngine.Sprite))
 end
 
 function Resource.destroy(object)

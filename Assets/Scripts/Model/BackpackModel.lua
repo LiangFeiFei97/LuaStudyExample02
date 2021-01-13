@@ -7,7 +7,7 @@
 local BackpackModel = {}
 
 BackpackModel.maxItemCount = 4 -- 背包容量
-BackpackModel.curItemCount = 4 -- 当前背包物品个数
+BackpackModel.curItemCount = 3 -- 当前背包物品个数
 BackpackModel.defItemID = 3 -- 默认穿戴
 BackpackModel.curItemID = 3 -- 当前穿戴
 
@@ -21,8 +21,7 @@ BackpackModel.items = {
 BackpackModel.curItems = {
     {name = '1' ,num = 10},
     {name = '2' ,num = 20},
-    {name = '3' ,num = 30},
-    {name = '4' ,num = 50},
+    {name = '3' ,num = 30}
 }
 
 return BackpackModel
